@@ -1,0 +1,61 @@
+// Buttons
+
+.btn {
+	@include btn(160px, 50px);
+	@include basic-transition();
+}
+
+
+.btn--orange {
+	width: 200px;
+	@include btn-bg-color($outrageousOrange);
+	&:hover {
+		background-color: darken($outrageousOrange, 10%);
+	}
+}
+
+// media queries
+
+@media (min-width: 72em) {
+	.btn--orange {
+		margin-bottom: em(145px);
+	}
+}
+
+
+.btn--blue {
+	margin: em(30px) auto 0 auto;
+	margin-top: em(30px);
+	@include btn-bg-color(rgb(85,133,162));
+	&:hover {
+		background-color: darken(rgb(85,133,162), 10%);
+	}
+}
+
+
+.btn--green {
+	margin: em(40px) auto 0 auto;
+	@include btn-bg-color(rgb(150,185,44));
+	&:hover {
+		background-color: darken(rgb(150,185,44), 10%);
+	}
+}
+
+
+@media (min-width: 60em) {
+ 
+ 	.btn--green {
+ 		margin: 36px 0 0 0;
+ 	}
+}
+
+.btn--red {
+	margin: em(20px) auto 0 auto;
+	margin-top: em(20px);
+	margin-bottom: 0;
+	text-align: center;
+	@include btn-bg-color(rgb(247,43,59));
+	&:hover {
+		background-color: darken(rgb(247,43,59), 10%);
+	}
+}

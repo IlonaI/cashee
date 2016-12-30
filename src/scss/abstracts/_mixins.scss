@@ -1,0 +1,44 @@
+// Flexbox 
+
+@mixin flex($position) {
+  display: flex;
+  justify-content: $position;
+}
+
+
+// Background
+
+@mixin bgImg($url, $position, $width) {
+	background: url($url), $position;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: $width;
+}
+
+// Buttons
+
+@mixin btn($width, $height) {
+	display: block;
+	width: $width;
+	height: $height;
+	font-size: em(20px);
+	text-align: center;
+	color: $white;
+	text-transform: uppercase;
+	border: none;
+	box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+	cursor: pointer;
+	@include basic-transition();
+}
+
+@mixin btn-bg-color($bg-color) {
+	background-color: $bg-color;
+	&:hover {
+		background-color: darken($bg-color, 10%);
+	}
+}
+
+
+// Transition
+
+@mixin basic-transition() { transition: all 0.4s ease-in-out; }

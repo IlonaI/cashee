@@ -1,0 +1,137 @@
+.page-header {
+	@include bgImg('../img/bg-header-s.jpg', center, 100%);
+	padding-bottom: em(50px);
+
+	&__title {
+		font-size: em(60px);
+		margin: 0;
+	}
+
+	&__subtitle {
+		padding-top: 15px;
+		padding-right: 10%;
+		padding-bottom: 15px;
+		font-size: em(17px);
+		color: $abbey;
+	}
+}
+
+
+.logo,
+.menu__link,
+.page-header__text { 
+	color: $mineShaft; }
+
+
+.navigation {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 10;
+	background-color: rgba(249,248,251,0.4);
+}
+
+
+.page-header__text {
+	max-width: 370px;
+	padding-top: 200px;
+	padding-bottom: 15px;
+}
+
+
+.logo__text {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	font-family: $logo-font-family;
+	font-size: em(40px);
+}
+
+
+.menu {
+	&__item {
+		text-align: center;
+		height: 40px;
+		line-height: 40px;
+	}
+
+	&__link {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		font-weight: 700;
+		line-height: 10px;
+		text-transform: uppercase;
+	}
+}
+
+
+.hamburger {
+	position: absolute;
+	top: 20px;
+	right: 2.5%;
+	width: 40px;
+	height: 30px;
+	padding-top: 5px;
+	border: 1px solid $mineShaft;
+	cursor: pointer;
+
+	&__icon {
+		display: block;
+		width: 60%;
+		height: 2px;
+		margin: 3px auto 3px auto;
+		background-color: $mineShaft;
+	}
+}
+
+
+.scroll {
+	@include flex(center);
+	margin-top: em(90px);
+	cursor: pointer;
+}
+
+
+.js-open {
+	display: none;
+}
+
+
+.js-active {
+	border-top: 2px solid $outrageousOrange;
+}
+
+// media queries
+
+@media (min-width: 48em) {
+
+	.navigation__wrapper {
+		@include flex(space-between);
+		align-items: center;
+	}
+
+
+	.menu {
+		@include flex(space-around);
+		&__item { margin-left: 30px; }
+	}
+
+
+	.hamburger {
+		display: none;
+	}
+}
+
+@media (min-width: 60em) {
+
+	.page-header {
+		background: url('../img/bg-header.jpg');
+		background-position: top;
+	}
+}
+
+@media (min-width: 60em) {
+	
+	.scroll {
+		margin-top: em(145px);
+	}
+}

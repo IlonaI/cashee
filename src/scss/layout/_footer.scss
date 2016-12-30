@@ -1,0 +1,36 @@
+.page-footer {
+	padding-top: em(50px);
+	padding-bottom: em(50px);
+	text-align: center;
+	color: rgb(165,165,165);
+	background-color: $mineShaft;
+
+	&__copy { margin-top: 0; }
+
+	&__logo {
+		margin-top: -20px;
+		font-family: $logo-font-family;
+		font-size: em(25px);
+	}
+
+	&__author {
+		&--red {
+			color: rgb(255,43,88);
+		}
+	}
+}
+
+// media queries
+
+@media (min-width: 60em) {
+
+	.wrapper--footer {
+		@include flex(space-between);
+		align-items: center;
+	}
+
+	
+	.page-footer__author {
+		margin-top: 0;
+	}
+}

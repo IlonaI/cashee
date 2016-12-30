@@ -1,0 +1,47 @@
+.newsletter {
+	color: $mineShaft;
+	background-color: $white;
+
+	&__title { font-size: em(40px); }
+
+	&__subtitle  {font-size: em(17px); }
+
+	&__form {
+		@include flex(center);
+		flex-direction: column;
+	}
+
+	&__input {
+		flex-basis: 100%;
+		height: 50px;
+		margin-top: 35px;
+		padding-left: em(20px);
+		border: 1px solid $mineShaft;
+	}
+}
+
+// media queries
+
+@media (min-width: 60em) {
+
+	.newsletter {
+		@include bgImg('../img/subscribe-bg.png', center, 100%);
+		
+		&__subtitle { max-width: 540px; }
+
+		&__form {
+			@include flex(flex-start);
+			flex-direction: row;
+		}
+
+		&__input {
+			flex-basis: 570px;
+			margin-right: 30px;
+		}
+	}
+}
+
+@media (min-width: 74em) {
+	
+	.newsletter { padding-bottom: 160px; }
+}

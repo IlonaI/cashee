@@ -1,0 +1,115 @@
+.contact {
+	color: $mineShaft;
+	@include bgImg('../img/contact-bg.png', center, 100%);
+
+	&__title,
+	&__subtitle {
+		text-align: center;
+	}
+
+	&__title { margin-bttom: 50px; }
+
+	&__subtitle {
+		max-width: 370px;
+		margin: 0 auto 33px auto;
+	}
+}
+
+
+.form__input,
+.textarea {
+	width: 100%;
+	margin-top: em(8px);
+	margin-bottom: em(8px);
+	padding-left: em(20px);
+	border: none;
+	background-color: rgba(0,196,196,0.5);
+	&::-webkit-input-placeholder {
+		font-size: em(15px);
+		color: white;
+	}
+	&:focus {
+		border-left: 4px solid rgb(53,91,130);
+		background-color: rgba(0,196,196,1);
+	}
+}
+
+
+.form__input,
+.textarea {
+	&::-moz-placeholder {
+		font-size: em(15px);
+		color: white;
+	}
+}
+
+
+.form__input,
+.textarea {
+	&:-ms-input-placeholder {
+		font-size: em(15px);
+		color: white;
+	}
+}
+
+
+.form__input,
+.textarea {
+	&::-moz-placeholder {
+		font-size: em(15px);
+		color: white;
+	}
+}
+
+
+.form__input {
+	height: 50px;
+}
+
+
+.textarea {
+	margin-bottom: 40px;
+	padding-top: em(15px);
+}
+
+
+.adress__data {
+	margin-top: em(10px);
+	margin-bottom: em(10px);
+	font-style: normal;
+	line-height: 20px;
+}
+
+
+.adress__name {
+	font-size: em(15px);
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+
+.adress__email {
+	color: $mineShaft;
+}
+
+
+// media queries 
+
+@media (min-width: 60em) {
+	
+	.contact__row {
+		display: flex;
+	}
+
+
+	.form {
+		flex-basis: 500px;
+		margin-right: 170px;
+	}
+
+	
+	.adress {
+		flex-basis: 315px;
+	}
+
+}
