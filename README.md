@@ -1,3 +1,3 @@
 # cashee
 
-Psd file converted into html. HTML, Sass, JS, jQuery + RWD(mobile first), BEM.
+Psd file converted into html. HTML, SCSS, JS, jQuery + RWD(mobile first), BEM.
